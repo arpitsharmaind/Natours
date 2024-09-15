@@ -8,6 +8,10 @@
     background-size: cover;
     background-position: top;
     position: relative;
+
+    @supports (background-image: url(../img/hero-small.avif)) {
+        background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.8),rgba($color-primary-dark, 0.8)), url(../img/hero-small.avif);
+    }
     
 
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
@@ -24,6 +28,10 @@
             rgba($color-primary-light, 0.8), 
             rgba($color-primary-dark, 0.8)), 
         url(../img/hero.jpg);
+
+        @supports (background-image: url(../img/hero.avif)) {
+            background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.8),rgba($color-primary-dark, 0.8)), url(../img/hero.avif);
+        }
     }
 
     @include respond(phone) {
